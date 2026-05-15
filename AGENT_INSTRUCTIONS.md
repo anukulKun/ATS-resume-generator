@@ -50,7 +50,7 @@ Before evaluating, scanning, or generating PDFs, check whether the basics exist:
 
 These files are user setup files. They are intentionally ignored by Git because they can contain private personal data.
 
-If any required file is missing, guide the user through setup instead of continuing. Be concrete and beginner-friendly: tell the user the exact folder and file path to open.
+If any required file is missing, guide the user through setup instead of continuing. Do not make a non-technical user hunt through folders first. Offer to create or update the setup files for them.
 
 Use these starter files:
 
@@ -79,7 +79,27 @@ cp starter-kit/cv-example.md cv.md
 cp starter-kit/portals.example.yml portals.yml
 ```
 
-After copying, tell the user to open these files in any text editor:
+Default first-run behavior:
+
+1. Copy any missing starter files.
+2. Ask the user for their information in chat.
+3. Accept pasted resume text, LinkedIn profile text, an existing CV, or rough notes.
+4. Write the user's answers into the correct private setup files.
+5. Run `npm run doctor`.
+6. Show the user which files were created or updated.
+
+Ask simple questions, one small group at a time:
+
+- "Paste your resume, LinkedIn profile text, or rough work history here."
+- "What job titles are you targeting?"
+- "Where do you want to work? Remote, hybrid, onsite, or specific cities?"
+- "What salary range or contract rate do you want?"
+- "What kinds of jobs should we avoid?"
+- "Which companies or job boards do you want to scan? You can also say 'use the example list for now.'"
+
+If the user pastes a resume or LinkedIn text, use it to build `cv.md`. Do not invent missing experience, dates, education, employers, numbers, credentials, or links. If something important is missing, ask a follow-up question or leave a clear placeholder.
+
+Create or update these files:
 
 - `cv.md` at the project root
 - `config/profile.yml` inside the `config/` folder

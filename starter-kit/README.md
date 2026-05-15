@@ -31,4 +31,25 @@ copy starter-kit\portals.example.yml portals.yml
 copy starter-kit\cv-example.md cv.md
 ```
 
-After copying, edit the new files with your real information.
+After copying, you can edit the new files yourself, or ask your AI runner to do it with you.
+
+Beginner-friendly prompt:
+
+```text
+I am a new user. Ask me simple questions and help me create cv.md, config/profile.yml, modes/_profile.md, and portals.yml.
+```
+
+If you already have a resume or LinkedIn profile text, paste it:
+
+```text
+Here is my resume or LinkedIn profile text. Please use it to fill in cv.md and ask me what is still missing:
+
+[paste your text here]
+```
+
+The AI runner should write the answers into:
+
+- `cv.md`
+- `config/profile.yml`
+- `modes/_profile.md`
+- `portals.yml`

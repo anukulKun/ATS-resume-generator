@@ -13,6 +13,7 @@ Key points:
   - `config/profile.yml` inside `config/`
   - `modes/_profile.md` inside `modes/`
   - `portals.yml` at the project root
+- For non-technical users, offer to ask simple questions and write those setup files for them. Accept pasted resume text, LinkedIn profile text, or rough work history.
 
 For Codex setup, see `docs/CODEX.md`.
 For other runner options, see `docs/AI_RUNNERS.md`.

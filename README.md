@@ -155,7 +155,9 @@ copy starter-kit\cv-example.md cv.md
 copy starter-kit\portals.example.yml portals.yml
 ```
 
-Now edit these copied files with your real information:
+You can fill these files yourself, but the easiest way is to let your AI runner help.
+
+The files are:
 
 - `cv.md` at the project root - your resume text
 - `config/profile.yml` inside the `config/` folder - your job search settings
@@ -176,10 +178,24 @@ Then type:
 Read AGENTS.md and help me set up ATS Resume Generator.
 ```
 
-The AI runner should first check the four setup files above. If they are missing or still full of example text, ask it:
+The AI runner should check the four setup files and help you fill them in. You can paste your resume, LinkedIn profile text, or rough work history directly into the chat.
 
 ```text
-Help me fill in cv.md, config/profile.yml, modes/_profile.md, and portals.yml.
+I am a new user. Ask me simple questions and help me create cv.md, config/profile.yml, modes/_profile.md, and portals.yml.
+```
+
+If you already have a resume, use:
+
+```text
+Here is my resume. Please turn it into cv.md and ask me any missing setup questions:
+
+[paste your resume here]
+```
+
+If you do not have a resume ready, use:
+
+```text
+I do not have a resume ready. Ask me questions about my work history and build the setup files for me.
 ```
 
 To review a job, paste the job link or job description and ask:

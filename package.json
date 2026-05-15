@@ -1,0 +1,32 @@
+{
+  "name": "ats-resume-generator",
+  "version": "1.6.0",
+  "description": "AI-powered job search helper",
+  "scripts": {
+    "doctor": "node scripts/doctor.mjs",
+    "verify": "node scripts/verify-pipeline.mjs",
+    "normalize": "node scripts/normalize-statuses.mjs",
+    "dedup": "node scripts/dedup-tracker.mjs",
+    "merge": "node scripts/merge-tracker.mjs",
+    "pdf": "node scripts/generate-pdf.mjs",
+    "sync-check": "node scripts/cv-sync-check.mjs",
+    "liveness": "node scripts/check-liveness.mjs",
+    "scan": "node scripts/scan.mjs",
+    "test": "node scripts/test-all.mjs"
+  },
+  "keywords": [
+    "ai",
+    "job-search",
+    "codex",
+    "career"
+  ],
+  "author": "ATS Resume Generator contributors",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "js-yaml": "^4.1.1",
+    "playwright": "^1.58.1"
+  }
+}
+
+

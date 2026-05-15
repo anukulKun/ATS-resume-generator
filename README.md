@@ -157,10 +157,10 @@ copy starter-kit\portals.example.yml portals.yml
 
 Now edit these copied files with your real information:
 
-- `config/profile.yml`
-- `modes/_profile.md`
-- `cv.md`
-- `portals.yml` if you want job scanning
+- `cv.md` at the project root - your resume text
+- `config/profile.yml` inside the `config/` folder - your job search settings
+- `modes/_profile.md` inside the `modes/` folder - extra notes about your goals and preferences
+- `portals.yml` at the project root - companies and job boards to scan
 
 ## 6. Start Your AI Runner
 
@@ -174,6 +174,12 @@ Then type:
 
 ```text
 Read AGENTS.md and help me set up ATS Resume Generator.
+```
+
+The AI runner should first check the four setup files above. If they are missing or still full of example text, ask it:
+
+```text
+Help me fill in cv.md, config/profile.yml, modes/_profile.md, and portals.yml.
 ```
 
 To review a job, paste the job link or job description and ask:

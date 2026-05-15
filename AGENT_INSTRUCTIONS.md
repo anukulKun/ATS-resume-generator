@@ -48,9 +48,58 @@ Before evaluating, scanning, or generating PDFs, check whether the basics exist:
 3. `modes/_profile.md`
 4. `portals.yml`
 
-If `modes/_profile.md` is missing, copy `starter-kit/profile-notes.template.md` to `modes/_profile.md`.
+These files are user setup files. They are intentionally ignored by Git because they can contain private personal data.
 
-If any required file is missing, guide the user through setup instead of continuing.
+If any required file is missing, guide the user through setup instead of continuing. Be concrete and beginner-friendly: tell the user the exact folder and file path to open.
+
+Use these starter files:
+
+| Starter file | Copy to | What the user edits there |
+|--------------|---------|---------------------------|
+| `starter-kit/cv-example.md` | `cv.md` | Their real CV: name, contact info, experience, education, skills |
+| `starter-kit/profile.example.yml` | `config/profile.yml` | Their job search profile: target role, location, salary, preferences |
+| `starter-kit/profile-notes.template.md` | `modes/_profile.md` | Plain-English notes about goals, strengths, dealbreakers, and work style |
+| `starter-kit/portals.example.yml` | `portals.yml` | Companies and job boards to scan |
+
+Windows setup commands:
+
+```cmd
+copy starter-kit\profile.example.yml config\profile.yml
+copy starter-kit\profile-notes.template.md modes\_profile.md
+copy starter-kit\cv-example.md cv.md
+copy starter-kit\portals.example.yml portals.yml
+```
+
+Mac or Linux setup commands:
+
+```bash
+cp starter-kit/profile.example.yml config/profile.yml
+cp starter-kit/profile-notes.template.md modes/_profile.md
+cp starter-kit/cv-example.md cv.md
+cp starter-kit/portals.example.yml portals.yml
+```
+
+After copying, tell the user to open these files in any text editor:
+
+- `cv.md` at the project root
+- `config/profile.yml` inside the `config/` folder
+- `modes/_profile.md` inside the `modes/` folder
+- `portals.yml` at the project root
+
+Explain the files in plain language:
+
+- `cv.md` is "your resume text."
+- `config/profile.yml` is "your job search settings."
+- `modes/_profile.md` is "extra notes about what you want and what to avoid."
+- `portals.yml` is "the list of companies or job boards to scan."
+
+Then run:
+
+```bash
+npm run doctor
+```
+
+Only continue to job evaluation after `npm run doctor` passes or after clearly explaining what is still missing.
 
 ## Mode Routing
 

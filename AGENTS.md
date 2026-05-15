@@ -8,6 +8,11 @@ Key points:
 - Store user-specific customization in `config/profile.yml`, `modes/_profile.md`, or user-owned files.
 - Never submit an application on the user's behalf.
 - Do not assume one specific AI runner. The user may use Codex, OpenCode, or another compatible local assistant.
+- For first-time setup, point the user to the exact files they must edit:
+  - `cv.md` at the project root
+  - `config/profile.yml` inside `config/`
+  - `modes/_profile.md` inside `modes/`
+  - `portals.yml` at the project root
 
 For Codex setup, see `docs/CODEX.md`.
 For other runner options, see `docs/AI_RUNNERS.md`.

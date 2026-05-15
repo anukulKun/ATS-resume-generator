@@ -1,0 +1,59 @@
+# Customization Guide
+
+## Profile (config/profile.yml)
+
+This is the single source of truth for your identity. All modes read from here.
+
+Key sections:
+- **candidate**: Name, email, phone, location, LinkedIn, portfolio
+- **target_roles**: Your North Star roles and archetypes
+- **narrative**: Your headline, exit story, superpowers, proof points
+- **compensation**: Target range, minimum, currency
+- **location**: Country, timezone, visa status, on-site availability
+
+## Target Roles (modes/_profile.md)
+
+Start by copying `starter-kit/profile-notes.template.md` to `modes/_profile.md`.
+
+The role table in `_profile.md` tells the AI runner how to frame your experience. Edit the table to match your career targets:
+
+```markdown
+| Archetype | Thematic axes | What they buy |
+|-----------|---------------|---------------|
+| **Your Role 1** | key skills | what they need |
+| **Your Role 2** | key skills | what they need |
+```
+
+Also add the projects or achievements that prove each role type.
+
+## Portals (portals.yml)
+
+Copy from `starter-kit/portals.example.yml` and customize:
+
+1. **title_filter.positive**: Keywords matching your target roles
+2. **title_filter.negative**: Tech stacks or domains to exclude
+3. **search_queries**: WebSearch queries for job boards (Ashby, Greenhouse, Lever)
+4. **tracked_companies**: Companies to check directly
+
+## CV Template (templates/cv-template.html)
+
+The HTML template uses these design tokens:
+- **Fonts**: Space Grotesk (headings) + DM Sans (body) -- self-hosted in `fonts/`
+- **Colors**: Cyan primary (`hsl(187,74%,32%)`) + Purple accent (`hsl(270,70%,45%)`)
+- **Layout**: Single-column, ATS-optimized
+
+To customize fonts/colors, edit the CSS in the template. Update font files in `fonts/` if switching fonts.
+
+## Negotiation Scripts (modes/_shared.md)
+
+The negotiation section provides frameworks for salary discussions. Replace the example scripts with your own:
+- Target ranges
+- Geographic arbitrage strategy
+- Pushback responses
+
+## States (templates/states.yml)
+
+The canonical states rarely need changing. If you add new states, update:
+1. `templates/states.yml`
+2. `scripts/normalize-statuses.mjs` (alias mappings)
+3. `modes/_shared.md` (any references)

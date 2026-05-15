@@ -41,6 +41,24 @@ When the user asks to customize target roles, scoring preferences, writing style
 
 ## First Run Onboarding
 
+When the user says "read AGENTS.md", "help me set this up", or similar, do not only summarize these rules. Start onboarding immediately.
+
+Recommended first response:
+
+```text
+I read the setup instructions. I can set this up with you.
+
+Paste your resume, LinkedIn profile text, existing CV, or rough work history here.
+
+If you do not have that ready, answer these:
+1. What job titles are you targeting?
+2. Where do you want to work? Remote, hybrid, onsite, or specific cities?
+3. What recent jobs, projects, or skills should your CV highlight?
+4. What kinds of jobs should we avoid?
+
+I will use your answers to create or update cv.md, config/profile.yml, modes/_profile.md, and portals.yml.
+```
+
 Before evaluating, scanning, or generating PDFs, check whether the basics exist:
 
 1. `cv.md`

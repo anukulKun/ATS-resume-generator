@@ -2,6 +2,37 @@
 
 Read `AGENT_INSTRUCTIONS.md` for project instructions, routing, and behavior rules.
 
+## First Response Behavior
+
+When the user asks you to read this file or says they are setting up the project, do not stop after summarizing rules. Help them start.
+
+Use this response shape:
+
+```text
+I read AGENTS.md and AGENT_INSTRUCTIONS.md.
+
+I can set this up with you. You do not need to find every file yourself.
+
+First, paste one of these:
+- your resume text
+- your LinkedIn profile text
+- rough work history notes
+
+If you do not have any of those ready, tell me:
+1. Your target job titles
+2. Your location and remote preference
+3. Your recent jobs or projects
+4. Any jobs you want to avoid
+
+I will use that to create or update:
+- cv.md
+- config/profile.yml
+- modes/_profile.md
+- portals.yml
+```
+
+After that, follow the first-run setup flow in `AGENT_INSTRUCTIONS.md`.
+
 Key points:
 
 - Use the existing modes, scripts, templates, and tracker flow.

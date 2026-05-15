@@ -1,6 +1,8 @@
 # Starter Kit
 
-These are the files new users copy during setup.
+These are example files for new users.
+
+You can open this folder to see what the setup files should look like. You do not have to edit these examples directly. The easier path is to paste your resume, LinkedIn text, or rough work history into your AI assistant and ask it to create the real files for you.
 
 ## Files
 
@@ -31,11 +33,12 @@ copy starter-kit\portals.example.yml portals.yml
 copy starter-kit\cv-example.md cv.md
 ```
 
-After copying, you can edit the new files yourself, or ask your AI runner to do it with you.
+After copying, you can edit the new files yourself, or ask your AI assistant to do it with you.
 
 Beginner-friendly prompt:
 
 ```text
+Read AGENTS.md and docs/AGENT_SETUP.md.
 I am a new user. Ask me simple questions and help me create cv.md, config/profile.yml, modes/_profile.md, and portals.yml.
 ```
 

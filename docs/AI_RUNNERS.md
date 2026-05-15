@@ -2,6 +2,16 @@
 
 ATS Resume Generator is just files, templates, and scripts. You can use it with different AI coding assistants.
 
+For the beginner setup flow, ask your assistant to read:
+
+```text
+AGENTS.md
+AGENT_INSTRUCTIONS.md
+docs/AGENT_SETUP.md
+```
+
+Then paste your resume, LinkedIn text, or rough work history. The assistant should create the setup files for you.
+
 ## Option 1 - Codex
 
 Use Codex if you want the first supported setup path.
@@ -32,6 +42,17 @@ Start your tool in the `ATS-resume-generator` folder and ask it:
 ```text
 Read AGENTS.md and AGENT_INSTRUCTIONS.md. Help me evaluate jobs using the existing ATS Resume Generator modes and scripts.
 ```
+
+## Option 3 - Claude Code, VS Code Chat, or Another Assistant
+
+Open this project folder in your assistant and ask:
+
+```text
+Read AGENTS.md, AGENT_INSTRUCTIONS.md, and docs/AGENT_SETUP.md.
+I am a new user. Ask me simple questions and create the setup files for me.
+```
+
+The assistant should ask for your resume, LinkedIn text, work history, target jobs, location, salary range, and jobs to avoid.
 
 The important part is not the brand of tool. The important part is that it reads:
 

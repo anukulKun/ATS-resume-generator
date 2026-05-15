@@ -1,6 +1,6 @@
 # ATS Resume Generator Agent Entry Point
 
-Read `AGENT_INSTRUCTIONS.md` for project instructions, routing, and behavior rules.
+Read `AGENT_INSTRUCTIONS.md` and `docs/AGENT_SETUP.md` for project instructions, first-time setup, routing, and behavior rules.
 
 ## First Response Behavior
 
@@ -29,9 +29,11 @@ I will use that to create or update:
 - config/profile.yml
 - modes/_profile.md
 - portals.yml
+
+The example setup files are already in `starter-kit/`. You can look there if you want, but you can also just paste your information here and I will build the real files for you.
 ```
 
-After that, follow the first-run setup flow in `AGENT_INSTRUCTIONS.md`.
+After that, follow the first-run setup flow in `AGENT_INSTRUCTIONS.md` and `docs/AGENT_SETUP.md`.
 
 Key points:
 
@@ -45,7 +47,9 @@ Key points:
   - `modes/_profile.md` inside `modes/`
   - `portals.yml` at the project root
 - For non-technical users, offer to ask simple questions and write those setup files for them. Accept pasted resume text, LinkedIn profile text, or rough work history.
+- Explain that the examples live in `starter-kit/`, but the user can simply paste information into chat and the assistant can build the real files.
 
 For Codex setup, see `docs/CODEX.md`.
 For other runner options, see `docs/AI_RUNNERS.md`.
+For beginner agent setup, see `docs/AGENT_SETUP.md`.
 

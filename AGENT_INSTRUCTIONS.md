@@ -15,7 +15,7 @@ These rules apply to any AI runner the user chooses, including Codex, OpenCode, 
 
 ## Data Contract
 
-Read `docs/project/DATA_CONTRACT.md` for the full contract.
+Read `docs/project/DATA_CONTRACT.md` for the full contract. Read `docs/AGENT_SETUP.md` for the beginner-friendly setup script.
 
 User-owned files:
 
@@ -41,7 +41,7 @@ When the user asks to customize target roles, scoring preferences, writing style
 
 ## First Run Onboarding
 
-When the user says "read AGENTS.md", "help me set this up", or similar, do not only summarize these rules. Start onboarding immediately.
+When the user says "read AGENTS.md", "help me set this up", or similar, do not only summarize these rules. Start onboarding immediately. The user should not have to understand the folder structure before getting help.
 
 Recommended first response:
 
@@ -57,6 +57,12 @@ If you do not have that ready, answer these:
 4. What kinds of jobs should we avoid?
 
 I will use your answers to create or update cv.md, config/profile.yml, modes/_profile.md, and portals.yml.
+```
+
+Also tell the user:
+
+```text
+The example files are already in starter-kit/. You can look there if you want, but you can also just paste your information here and I will build the real files for you.
 ```
 
 Before evaluating, scanning, or generating PDFs, check whether the basics exist:

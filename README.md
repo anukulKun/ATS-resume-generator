@@ -1,15 +1,17 @@
 # ATS Resume Generator - Your AI Job Search Helper
 
-ATS Resume Generator helps you judge jobs before you apply. It can review a job posting, compare it with your CV, create a tailored PDF CV, and keep a private tracker of jobs you have looked at.
+ATS Resume Generator helps you turn your resume into a job-specific ATS-friendly resume. It can read a job post, compare it with your background, tell you if the job is worth applying to, create a tailored PDF resume, and keep a private job tracker on your computer.
 
-It runs on your computer. You choose the AI runner. The first setup path in this README uses Codex, but ATS Resume Generator is not locked to one AI provider.
+You do not need to understand the folders first. Start an AI chat in this project, ask it to read the setup guide, and paste your resume, LinkedIn text, or rough work history. The AI can create the setup files for you and ask simple follow-up questions when something is missing.
+
+You can use Codex, Claude Code, VS Code chat, OpenCode, or another AI assistant that can read and edit files in this folder. This project is not locked to one AI company.
 
 ## What It Does
 
 - Reviews a job posting and tells you if it is a strong match
 - Scores the job so you can avoid wasting time on poor fits
-- Helps tailor your CV for that job
-- Creates a PDF CV
+- Helps tailor your resume for that job
+- Creates a PDF resume
 - Tracks jobs privately on your computer
 - Can scan company career pages if you add a company list
 - Helps prepare interview notes and follow-up drafts
@@ -23,12 +25,40 @@ It runs on your computer. You choose the AI runner. The first setup path in this
 
 You stay in control. Always read the output before using it.
 
+## How You Use It
+
+The normal flow is:
+
+1. Download this project.
+2. Install the required tools.
+3. Start your AI assistant inside this folder.
+4. Tell it to read `AGENTS.md` and `docs/AGENT_SETUP.md`.
+5. Paste your resume, LinkedIn profile text, or rough work history.
+6. Let the AI create your private setup files.
+7. Paste a job post or job link.
+8. Review the score, tailored resume, and PDF in the `output/` folder.
+
+The beginner examples already exist in:
+
+```text
+starter-kit/
+```
+
+Those examples are only starting points. Your real personal files are created here:
+
+- `cv.md` in the main project folder
+- `config/profile.yml` inside the `config/` folder
+- `modes/_profile.md` inside the `modes/` folder
+- `portals.yml` in the main project folder
+
+If you do not want to edit files yourself, paste your information in the AI chat and ask it to build those files for you.
+
 ## Install These First
 
 You need three things:
 
 1. Node.js
-2. An AI runner, such as Codex
+2. An AI assistant, such as Codex, Claude Code, VS Code chat, or OpenCode
 3. Playwright, which creates PDF files
 
 This usually takes 15 to 20 minutes the first time.
@@ -51,9 +81,9 @@ node --version
 
 Any version 18 or higher is fine.
 
-## 2. Choose Your AI Runner
+## 2. Choose Your AI Assistant
 
-ATS Resume Generator can work with different terminal AI tools.
+Pick one assistant. The project works with any assistant that can read and edit files in this folder.
 
 ### Option 1 - Codex
 
@@ -75,13 +105,30 @@ Official Codex reference:
 https://help.openai.com/en/articles/11096431
 ```
 
-### Option 2 - OpenCode or Another Local AI Runner
+### Option 2 - Claude Code
 
-Start your AI runner inside the `ATS-resume-generator` folder and ask it to read:
+Start Claude Code inside this project folder and ask it:
+
+```text
+Read AGENTS.md and docs/AGENT_SETUP.md. Help me set up ATS Resume Generator.
+```
+
+### Option 3 - VS Code Chat
+
+Open this project folder in VS Code. In chat, ask:
+
+```text
+Read AGENTS.md and docs/AGENT_SETUP.md. Help me set up ATS Resume Generator. Ask me for my resume or work history and create the setup files.
+```
+
+### Option 4 - OpenCode or Another AI Assistant
+
+Start your AI assistant inside the `ATS-resume-generator` folder and ask it to read:
 
 ```text
 AGENTS.md
 AGENT_INSTRUCTIONS.md
+docs/AGENT_SETUP.md
 ```
 
 Those files explain how to use ATS Resume Generator safely.
@@ -129,13 +176,60 @@ Check the setup:
 npm run doctor
 ```
 
-## 5. Copy the Starter Files
+If it says all checks passed, continue.
 
-All first-time setup files are in one folder:
+## 5. Set Up Your Personal Files
+
+The example files are already in:
 
 ```text
 starter-kit/
 ```
+
+Each example shows what your real file should look like.
+
+| Example file | Real file the AI creates | What it means |
+|--------------|--------------------------|---------------|
+| `starter-kit/cv-example.md` | `cv.md` | Your resume text |
+| `starter-kit/profile.example.yml` | `config/profile.yml` | Your job search settings |
+| `starter-kit/profile-notes.template.md` | `modes/_profile.md` | Extra notes about your goals, strengths, and jobs to avoid |
+| `starter-kit/portals.example.yml` | `portals.yml` | Companies or job boards to scan |
+
+### Easiest Way
+
+Start your AI assistant and paste this:
+
+```text
+Read AGENTS.md and docs/AGENT_SETUP.md.
+
+I am a new user. Please set up ATS Resume Generator for me.
+Ask me simple questions.
+If I paste my resume, LinkedIn profile, or rough work history, use it to create:
+- cv.md
+- config/profile.yml
+- modes/_profile.md
+- portals.yml
+
+If anything is missing, ask me for it.
+```
+
+Then paste one of these:
+
+- your resume text
+- your LinkedIn profile text
+- rough notes about your jobs, projects, skills, education, and target roles
+
+The AI should ask for missing details such as:
+
+- job titles you want
+- location and remote preference
+- salary range or contract rate
+- industries or jobs you want to avoid
+- companies or job boards you want to scan
+
+### Manual Way
+
+If you prefer to copy the examples yourself, use these commands.
 
 Mac or Linux:
 
@@ -155,16 +249,9 @@ copy starter-kit\cv-example.md cv.md
 copy starter-kit\portals.example.yml portals.yml
 ```
 
-You can fill these files yourself, but the easiest way is to let your AI runner help.
+After copying, open the real files and replace the example text with your information. You can also ask the AI assistant to do this for you.
 
-The files are:
-
-- `cv.md` at the project root - your resume text
-- `config/profile.yml` inside the `config/` folder - your job search settings
-- `modes/_profile.md` inside the `modes/` folder - extra notes about your goals and preferences
-- `portals.yml` at the project root - companies and job boards to scan
-
-## 6. Start Your AI Runner
+## 6. Start Your AI Assistant
 
 If you use Codex, run this inside the `ATS-resume-generator` folder:
 
@@ -175,14 +262,10 @@ codex
 Then type:
 
 ```text
-Read AGENTS.md and help me set up ATS Resume Generator.
+Read AGENTS.md and docs/AGENT_SETUP.md. Help me set up ATS Resume Generator.
 ```
 
-The AI runner should check the four setup files and help you fill them in. You can paste your resume, LinkedIn profile text, or rough work history directly into the chat.
-
-```text
-I am a new user. Ask me simple questions and help me create cv.md, config/profile.yml, modes/_profile.md, and portals.yml.
-```
+The AI assistant should check the four setup files and help you fill them in. You can paste your resume, LinkedIn profile text, or rough work history directly into the chat.
 
 If you already have a resume, use:
 
@@ -198,22 +281,28 @@ If you do not have a resume ready, use:
 I do not have a resume ready. Ask me questions about my work history and build the setup files for me.
 ```
 
-To review a job, paste the job link or job description and ask:
+After setup passes, paste a job link or job description and ask:
 
 ```text
 Use ATS Resume Generator to evaluate this job and tell me if it is worth applying.
 ```
 
+The AI will compare the job with your resume and profile. It should give you a score, explain the match, and create a tailored resume. PDF files are saved in:
+
+```text
+output/
+```
+
 ## Common Tasks
 
-Ask your AI runner:
+Ask your AI assistant:
 
 ```text
 Evaluate this job: [paste job link or description]
 ```
 
 ```text
-Create a tailored PDF CV for the last job.
+Create a tailored PDF resume for the last job.
 ```
 
 ```text
@@ -232,14 +321,14 @@ Help me prepare interview questions for this role.
 
 ```text
 ATS-resume-generator/
-  starter-kit/        First-time setup files to copy
-  config/             Your private profile goes here
-  modes/              Instructions the AI runner reads
+  starter-kit/        Example files for first-time setup
+  config/             Your private job search settings go here
+  modes/              Instructions the AI assistant reads
   scripts/            Helper commands used by npm scripts
   templates/          PDF layout and tracker status files
   data/               Private job tracker data
   reports/            Private job review reports
-  output/             Generated PDF CVs
+  output/             Generated PDF resumes
   docs/               Extra help and project policy docs
   batch/              Optional tracker import files
   fonts/              Fonts used for PDFs
@@ -265,9 +354,9 @@ Install Node.js from:
 https://nodejs.org
 ```
 
-### `codex` is not found
+### Your AI assistant is not found
 
-Install Codex:
+Install or open the AI assistant you chose. For Codex:
 
 ```bash
 npm install -g @openai/codex
@@ -289,6 +378,8 @@ Check that these files exist and are filled in:
 - `config/profile.yml`
 - `modes/_profile.md`
 
+Or paste your resume or work history into your AI assistant and ask it to create those files.
+
 ### Something else is broken
 
 Run:
@@ -299,12 +390,10 @@ npm run doctor
 
 ## Privacy
 
-Your CV, profile, reports, tracker, and PDFs stay in private files on your computer.
+Your resume, profile, reports, tracker, and PDFs stay in private files on your computer.
 
-When you ask an AI runner to use your CV or profile, that AI runner may send the text to its provider. Check the privacy policy for the AI tool you choose.
+When you ask an AI assistant to use your resume or profile, that assistant may send the text to its provider. Check the privacy policy for the AI tool you choose.
 
 ## License
 
 MIT. You can use, change, and share this project.
-
-

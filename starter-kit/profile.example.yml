@@ -1,0 +1,78 @@
+# ATS Resume Generator profile template
+# Copy this file to config/profile.yml, then replace the example values.
+# Keep config/profile.yml private. It can contain your personal details.
+
+candidate:
+  full_name: "Your Full Name"          # Your real name as it appears on your CV
+  email: ""                            # The email you want on your CV
+  phone: "+1 555 000 0000"             # Optional phone number for your CV
+  location: "Your City, Country"       # Where you are based
+  linkedin: "linkedin.com/in/yourname" # Optional LinkedIn profile
+  portfolio_url: ""                    # Optional portfolio, website, or case study page
+  github: "github.com/yourname"        # Optional GitHub or code profile
+  twitter: ""                          # Optional social profile; leave blank if not relevant
+
+target_roles:
+  primary:
+    - "Your Target Job Title"          # Example: "Product Designer" or "Data Analyst"
+    - "Another Target Job Title"       # Add or remove titles as needed
+
+  archetypes:
+    # EDIT THIS: replace with your target role types.
+    # fit can be: primary, secondary, or adjacent.
+    - name: "Primary role type"        # Example: "Backend Engineer"
+      level: "Target level"            # Example: "Mid-level", "Senior", "Manager"
+      fit: "primary"                   # primary = best match
+    - name: "Secondary role type"      # Example: "Solutions Engineer"
+      level: "Target level"
+      fit: "secondary"                 # secondary = still a good fit
+    - name: "Stretch role type"        # Example: "Product Manager"
+      level: "Target level"
+      fit: "adjacent"                  # adjacent = possible stretch
+
+narrative:
+  headline: "Short professional headline" # One line that describes you
+  exit_story: "Why you are looking now"    # Optional short career story or transition reason
+  superpowers:
+    - "Your strongest skill"              # Example: "Turning messy data into clear reports"
+    - "Another strength"                  # Example: "Working with non-technical teams"
+    - "Another strength"
+
+  proof_points:
+    # Add projects, achievements, articles, or case studies that prove your strengths.
+    - name: "Project or achievement name"
+      url: ""
+      hero_metric: "Short measurable result" # Example: "Reduced support tickets by 30%"
+    - name: "Another proof point"
+      url: ""
+      hero_metric: "Short result or evidence"
+
+  demo:
+    url: ""                               # Optional demo, portfolio, or project URL
+    password: ""                          # Optional demo password; leave blank if none
+
+compensation:
+  target_range: "$80K-$100K"              # Your ideal salary or total compensation range
+  currency: "USD"                         # Currency for salary comparisons
+  minimum: "$70K"                         # Your walk-away number
+  location_flexibility: "Remote preferred" # Remote, hybrid, relocation, travel, or onsite notes
+
+location:
+  country: "Your Country"                 # Country where you are legally based
+  city: "Your City"                       # City or region
+  timezone: "Your Timezone"               # Example: "America/New_York" or "Europe/London"
+  visa_status: "Your work authorization"  # Example: "No sponsorship needed" or "Needs sponsorship"
+  onsite_availability: "Your preference"  # Example: "Open to 2 days/week onsite"
+
+preferences:
+  open_to_remote: true                     # true if remote roles are okay
+  open_to_relocation: false                # true if you are willing to move
+  industries:
+    - "Industry you like"                 # Example: "Healthcare", "Education", "Fintech"
+  deal_breakers:
+    - "Thing you want to avoid"           # Example: "No unpaid take-home projects"
+
+cv:
+  output_format: "html"                   # Keep this as "html" for PDF generation
+  canva_resume_design_id: ""              # Optional Canva design ID for visual CV generation
+
